@@ -1,8 +1,15 @@
 import React from 'react'
 
-const MemberRow = () => {
+const MemberRow = ({id,name,role,initials,experience}) => {
   return (
-    <div>MemberRow</div>
+    <>
+    <div className='member' key={id}>
+      <p>{initials}</p>
+      <p>{name}</p>
+      <p>{role}</p>
+      <p>{experience} years</p>
+    </div>
+    </>
   )
 }
 

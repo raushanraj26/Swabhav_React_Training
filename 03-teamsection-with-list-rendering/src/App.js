@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import TeamSection from "./components/TeamSection";
+import { employees } from "./data/employee";
+
 
 function App() {
+    
+  const engineeringEmployees = employees.filter(
+    (employee) => employee.department === "Engineering"
+  );
+
+  const designEmployees = employees.filter(
+    (employee) => employee.department === "Design"
+  );
+
+  const productEmployees = employees.filter(
+    (employee) => employee.department === "Product"
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+<TeamSection
+        department="Engineering"
+        members={engineeringEmployees}
+      />
+
+      <TeamSection
+        department="Design"
+        members={designEmployees}
+      />
+
+      <TeamSection
+        department="Product"
+        members={productEmployees}
+      />
+    </>
   );
 }
 
