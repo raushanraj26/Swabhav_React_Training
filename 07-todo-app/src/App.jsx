@@ -26,7 +26,7 @@ function App() {
       done: false,
     };
 
-    setTasks([...tasks, newTask]); // ✅ immutable update
+    setTasks([...tasks, newTask]); //immutable update
     setInputValue(""); // clear the input
   }
 
@@ -36,12 +36,7 @@ function App() {
   }
   function toggleTask(id) {
     setTasks(
-      tasks.map(
-        (task) =>
-          task.id === id
-            ? { ...task, done: !task.done } // new object, flipped done
-            : task, // unchanged
-      ),
+      tasks.map( (task) => task.id === id ? { ...task, done: !task.done }  : task, ),
     );
   }
 
