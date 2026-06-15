@@ -7,6 +7,11 @@ const DataCalling = () => {
   const [users, setUsers] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+
+
+
+
+
   const readData = async () => {
     const response = await getAllUsers();
     console.log(response);
@@ -15,7 +20,9 @@ const DataCalling = () => {
   return (
     <>
       <div>
-        <button onClick={readData}>Read Data</button>
+        <button onClick={readData}>Show All Students</button>
+        <button>Add Student</button>
+        
       </div>
       <div>
         <table border="1">

@@ -9,3 +9,12 @@ export const getAllUsers = async () => {
         return;
     }
 }
+//  const addStudent=async (student)=>{
+//      try {
+//         const response = await axios.post("http://localhost:8080/api/students/add-student", student);
+//         return response.data;
+//     } catch (error) {
+//         console.error("Error adding student:", error);
+//         return;
+//     }
+// }
