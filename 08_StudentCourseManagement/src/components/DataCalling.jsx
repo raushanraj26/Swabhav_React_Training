@@ -9,9 +9,6 @@ const DataCalling = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
 
 
-
-
-
   const readData = async () => {
     const response = await getAllUsers();
     console.log(response);
